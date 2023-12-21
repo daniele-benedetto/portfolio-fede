@@ -1,0 +1,111 @@
+@keyframes load {
+    0% {
+      color: black;
+    }
+    100% {
+      color: grey;
+    }
+  }
+  
+  .bootupWindow {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: 1s all;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .boot {
+    transition: 1s opacity;
+    cursor: none;
+    animation: load 0.1s ease-out 0s 1 !important;
+  }
+  
+  .logo {
+    -webkit-user-drag: none;
+    pointer-events: none;
+    width: 130px;
+    justify-self: flex-start;
+    margin-top: 7px;
+    margin-right: 12px;
+  }
+  
+  .barContainer {
+    margin-top: 37px;
+    padding: 0;
+    position: relative;
+  }
+  
+  .barContainer .barBackground {
+    margin: 0;
+    background-color: #424242;
+    border: none;
+    border-radius: 9999px;
+    width: 150px;
+    height: 4px;
+  }
+  
+  .barContainer .bar {
+    position: absolute;
+    height: 4px;
+    width: 0px;
+    border-radius: 9999px;
+    border: none;
+    top: 0;
+    background-color: white;
+  }
+  
+  .vanished {
+    opacity: 0;
+    z-index: 90;
+    background-color: black;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    transition: 1s all;
+    cursor: none;
+  }
+  
+  .vanished .logo {
+    visibility: hidden;
+    justify-self: flex-start;
+    margin-top: 7px;
+    margin-right: 12px;
+  }
+  
+  .vanished .barContainer {
+    visibility: hidden;
+    margin-top: 37px;
+    padding: 0;
+    position: relative;
+  }
+  
+  .vanished .barContainer .barBackground {
+    margin: 0;
+    background-color: #424242;
+    border: none;
+    border-radius: 9999px;
+    width: 150px;
+    height: 4px;
+  }
+  
+  .vanished .barContainer .bar {
+    position: absolute;
+    height: 4px;
+    width: 0px;
+    border-radius: 9999px;
+    border: none;
+    top: 0;
+    background-color: white;
+  }
+  

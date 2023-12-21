@@ -1,0 +1,341 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  overflow: hidden;
+}
+
+.inner_wrapper {
+  position: relative;
+  height: calc(100% - 102px);
+  width: 100vw;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login_form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form_image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.login_form_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.login_form_username {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login_form_input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.login_form_input_error {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 3px solid red;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  animation: shake 0.5s ease-in-out;
+  animation-iteration-count: 1; 
+}
+
+.login_form_input_error:focus {
+  outline: none;
+  border: 3px solid red;
+}
+
+.login_form_input:focus {
+  outline: none;
+  border: 3px solid rgb(0, 132, 255);
+}
+
+.login_form_message {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.dashboard_sidebar {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.dashboard_sidebar_list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.dashboard_sidebar_list_profile_image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+
+.dashboard_sidebar_list_profile_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dashboard_sidebar_list_item {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dashboard_sidebar_list_item:hover {
+  border: 3px solid rgb(0, 132, 255);
+}
+
+.dashboard_sidebar_list_item_active {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 3px solid rgb(0, 132, 255);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dashboard_sidebar_list_item_link {
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.dashboard_sidebar_list_item_link_icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.dashboard_sidebar_list_item_link_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dashboard_content {
+  width: 100%;
+  padding: 20px;
+}
+
+.dashboard_content_row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: 20px;
+}
+
+.dashboard_content_row_100 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+  gap: 20px;
+}
+
+.dashboard_content_list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: space-between;
+  position: relative;
+}
+
+.dashboard_content_list_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.dashboard_content_list_image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.dashboard_content_list_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dashboard_content_list_image_profile {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin: 0 auto 80px auto;
+}
+
+.dashboard_content_list_image_profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dashboard_content_list_color {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard_content_list_icon {
+  font-size: 24px;
+  margin: 0 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+
+
+.dashboard_content_list_icon_tooltip {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 400px;
+  z-index: 10;
+}
+
+.dashboard_content_list_items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.dashboard_content_list_item {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.dashboard_content_list_item_image {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.dashboard_content_list_item_input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  padding: 0 10px;
+  margin: 0 20px;
+}
+
+.dashboard_content_list_item_input_error {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 3px solid red;
+  padding: 0 10px;
+  margin: 0 20px;
+  animation: shake 0.5s ease-in-out;
+  animation-iteration-count: 1; 
+}
+
+.dashboard_content_list_item_input_error:focus {
+  outline: none;
+  border: 3px solid red;
+}
+
+.dashboard_content_list_item_input:focus {
+  outline: none;
+  border: 3px solid rgb(0, 132, 255);
+}
+
+.dashboard_content_list_item_icon {
+  font-size: 24px;
+  margin: 0 10px;
+  display: flex;
+}

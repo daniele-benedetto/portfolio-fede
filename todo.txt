@@ -1,0 +1,8 @@
+Home
+Generare griglia cartelle
+Visuanere specifica cartella
+Al click del menu o menu folder aprire suo specifico elemento
+Se image aprire lightbox, se video aprire video, se altro aprire su pagina esterna il link di riferimento
+
+Pagina desktop
+gestire correttamente i diversi tipi di file

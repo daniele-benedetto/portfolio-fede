@@ -1,0 +1,53 @@
+.wrapper {
+  position: absolute;
+  height: 72px;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  background: rgba(245, 245, 245, 0.15);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(81.5485px);
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+  width: auto;
+  max-width: 740px;
+  display: flex;
+  justify-content: center;
+}
+
+.ul {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+}
+
+.ul > li > img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  margin: 0 10px;
+}
+
+.ul > li > img:hover {
+  width: 70px;
+  height: 70px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    width: 70px;
+    height: 70px;
+  }
+  100% {
+    transform: translateY(-20px);
+    width: 70px;
+    height: 70px;
+  }
+}
+.bounceAnimation {
+  animation: bounce 0.5s infinite alternate;
+}
