@@ -327,13 +327,13 @@ const Desktop = () => {
                 {gridItem.type === "folder" ? (
                   <img src={"/images/folder.png"} alt="folder"  />
                 ) : gridItem.type === "image" ? (
-                  <img src={gridItem.name ? `${uri}/images/${gridItem.name}` : "/images/image_file.png"} alt="image"  />
+                  <img src={gridItem.file_names ? `${uri}/images/${gridItem.file_names}` : "/images/image_file.png"} alt="image"  />
                 ) : gridItem.type === "video" ? (
                   <img src={"/images/mov.png"} alt="video"  />
                 ) : gridItem.type === "pdf" ? (
                   <img src={"/images/pdf.png"} alt="pdf"  />
                 ) : gridItem.type === "link" ? (
-                  <img src={gridItem.name ? `${uri}/images/${gridItem.name}` : "/images/image_file.png"} alt="link"  />
+                  <img src={gridItem.file_names ? `${uri}/images/${gridItem.file_names}` : "/images/image_file.png"} alt="link"  />
                 ) : (
                   <img src={"/images/image_file.png"} alt="image"  />
                 )}
