@@ -6,8 +6,9 @@ error_reporting(1);
 //--------------//
 
 $_CONFIG['host'] = '127.0.0.1';
-$_CONFIG['user'] = 'root';
-$_CONFIG['dbname'] = 'test';
+$_CONFIG['user'] = 'daniele_benedetto';
+$_CONFIG['dbname'] = 'portfolio';
+$_CONFIG['pass'] = 'TRMhYze2Dya68z3';
 
 $_CONFIG['table_admins_sessions'] = "admins_sessions";
 $_CONFIG['table_administrators'] = "administrators";
