@@ -8,7 +8,7 @@ header('Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 try {
 
-    $dbh = new PDO ( "mysql:host=localhost;dbname=".$_CONFIG['dbname'], "root", $_CONFIG['pass'] );
+    $dbh = new PDO ( "mysql:host=localhost;dbname=".$_CONFIG['dbname'], $_CONFIG['user'], $_CONFIG['pass'] );
     $dbh->exec("SET CHARACTER SET utf8mb4");
 
     $sql = "SELECT * FROM settings";
