@@ -214,3 +214,37 @@ ul {
   width: 100%;
   max-width: 40px;
 }
+
+.home_grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 4px; 
+}
+
+.home_grid-row {
+  display: flex;
+}
+
+.home_grid-item {
+  flex: 1;
+  position: relative;
+  min-height: 80px; 
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+}
+
+.home_grid-item img {
+  width: 100%;
+  max-width: 75px
+}
+
+
+.home_dashboard_content {
+  width: 100%;
+  padding: 20px;
+}

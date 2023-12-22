@@ -21,7 +21,7 @@ try {
     $dbh = new PDO ( "mysql:host=localhost;dbname=".$_CONFIG['dbname'], $_CONFIG['user'], $_CONFIG['pass'] );
     $dbh->exec("SET CHARACTER SET utf8mb4");
 
-    $sql = "UPDATE file SET title = ? WHERE id = ?";
+    $sql = "UPDATE files SET title = ? WHERE id = ?";
     $query = $dbh->prepare ($sql);
     $query->bindParam(1, $title, PDO::PARAM_STR);
     $query->bindParam(2, $id, PDO::PARAM_INT);

@@ -4,6 +4,7 @@ import Folders from "./components/content/folders/Folders"
 import MenuBar from "./components/menuBar/MenuBar"
 import Loader from "./components/loader/Loader"
 import settings from "./services/settings/all"
+import desktop from "./services/desktop/all"
 import { uri } from "./utils/const"
 import { hexToRgba } from "./utils/colors"
 
@@ -12,7 +13,7 @@ const App = () => {
   const [desktopBackground, setDesktopBackground] = useState("")
   const [textColor, setTextColor] = useState("")
   const [backgroundColor, setBackgroundColor] = useState("")
-
+  const [gridData, setGridData] = useState([])
 
   const handleToogleFolder = (itemId) => {
     setIsFolderOpen(
@@ -34,6 +35,11 @@ const App = () => {
         setDesktopBackground(`${uri}/images/${desktopBackground.value}`)
         setBackgroundColor(backgroundColor.value)
         setTextColor(textColor.value)
+
+        const resDesktop = await desktop()
+        if (resDesktop.result === "ok") {
+          setGridData(resDesktop.desktop)
+        }
       }
     }
     getSettings()
@@ -44,7 +50,7 @@ const App = () => {
       <Loader />
       <div className="wrapper" style={{ backgroundImage: `url(${desktopBackground})` }}>
         <div className="inner_wrapper">
-          <Folders handleToogleFolder={handleToogleFolder} isFolderOpen={isFolderOpen} closeFolder={closeFolder} textColor={textColor} />
+          <Folders handleToogleFolder={handleToogleFolder} isFolderOpen={isFolderOpen} closeFolder={closeFolder} textColor={textColor} gridData={gridData} />
         </div>
         <MenuBar backgroundColor={hexToRgba(backgroundColor, 0.33)} />
       </div>
